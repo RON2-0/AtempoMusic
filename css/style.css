@@ -1,0 +1,22 @@
+:root {
+    --color-primary: #f8e4e0;
+    --color-secondary: #000;
+}
+
+::selection {
+    background: rgba(0,0,0,.8);
+    color: #fff;
+}   
+
+/* Barra de Scroll */
+  
+body::-webkit-scrollbar {
+    width: 0.45rem;
+}
+body::-webkit-scrollbar-track {
+    background: #2a2a38;
+}
+body::-webkit-scrollbar-thumb {
+    background: #646780;
+    border-radius: 4px;
+}
