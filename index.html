@@ -1,0 +1,257 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atempo Music</title>
+    <link rel=StyleSheet href="./css/style.css" type="text/css">
+    <link rel="icon" href="./img/Favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  </head>
+
+<body>
+
+  <header>
+            <input type="checkbox" id="nav" class="hidden">
+            <label for="nav" class="nav-btn">
+                <i></i>
+                <i></i>
+                <i></i>
+            </label>
+            
+            <a class="logo" class href="#">
+                <img src="./img/Favicon.png">
+            </a>
+            
+            <div class="nav-wrapper">
+          <nav>
+                <ul>
+                    <li><a href="./paginas/categorias.html">Catergorías</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="./paginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="#contact">Contactar</a></li>
+                </ul>
+            </div>
+          </nav>
+  </header>
+
+<!--Audio automático escondido-->
+
+  <audio loop autoplay>
+    <source src="/audios/ElevatorMusic.mp3" type="audio/mp3" volume="-1000">
+  </audio>
+
+<main>
+
+  <div class="img-slider">
+    <div class="slide active">
+      <img src="./img/1-slider.png" alt="">
+      <div class="info">
+        <h2>01</h2>
+        </div>
+    </div>
+    <div class="slide">
+      <img src="./img/2-slider.png" alt="">
+      <div class="info">
+        <h2>02</h2>
+        </div>
+    </div>
+    <div class="slide">
+      <img src="./img/3-slider.png" alt="">
+      <div class="info">
+        <h2>03</h2>
+         </div>
+    </div>
+    <div class="slide">
+      <img src="./img/4-slider.png" alt="">
+      <div class="info">
+        <h2>04</h2>
+        </div>
+    </div>
+    <div class="slide">
+      <img src="./img/5-slider.png" alt="">
+      <div class="info">
+        <h2>05</h2>
+        </div>
+    </div>
+    <div class="navigation">
+      <div class="btn active"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  var slides = document.querySelectorAll('.slide');
+  var btns = document.querySelectorAll('.btn');
+  let currentSlide = 1;
+
+  // Javascript img-slider manual
+  var manualNav = function(manual){
+    slides.forEach((slide) => {
+      slide.classList.remove('active');
+
+      btns.forEach((btn) => {
+        btn.classList.remove('active');
+      });
+    });
+
+    slides[manual].classList.add('active');
+    btns[manual].classList.add('active');
+  }
+
+  btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      manualNav(i);
+      currentSlide = i;
+    });
+  });
+
+  // Javascript img-slider automático
+  var repeat = function(activeClass){
+    let active = document.getElementsByClassName('active');
+    let i = 1;
+
+    var repeater = () => {
+      setTimeout(function(){
+        [...active].forEach((activeSlide) => {
+          activeSlide.classList.remove('active');
+        });
+
+      slides[i].classList.add('active');
+      btns[i].classList.add('active');
+      i++;
+
+      if(slides.length == i){
+        i = 0;
+      }
+      if(i >= slides.length){
+        return;
+      }
+      repeater();
+    }, 10000);
+    }
+    repeater();
+  }
+  repeat();
+  </script>
+   
+  <section class="productos">
+    <div class="h1-hero"><h1>Tenemos todo lo necesario</h1></div>
+    
+    <div class="hero-section">
+      <div class="card-grid">
+        <a class="card_" href="./paginas/categorias.html">  <!-- Hipervínculo hacia categorías -->
+          <div class="card__background" style="background-image: url(https://i.pinimg.com/750x/e2/db/ba/e2dbbaf9fbb30e081c7a258990a70269.jpg)"></div>
+          <div class="card__content">
+            <p class="card__category">Cuerdas</p>
+            <h3 class="card__heading">Guitarras, bajos, etc.</h3>
+          </div>
+        </a>
+        <a class="card_" href="./paginas/categorias.html"><!-- Hipervínculo hacia categorías -->
+          <div class="card__background" style="background-image: url(https://i.pinimg.com/564x/8c/88/e6/8c88e6206dec0d691bf7b232c8621db5.jpg)"></div>
+          <div class="card__content">
+            <p class="card__category">Teclas</p>
+            <h3 class="card__heading">Pianos, sintetizadores, etc.</h3>
+          </div>
+        </a>
+        <a class="card_" href="./paginas/categorias.html"><!-- Hipervínculo hacia categorías -->
+          <div class="card__background" style="background-image: url(https://i.pinimg.com/564x/c8/30/9f/c8309fa1d586a2f5955e785d1177273c.jpg)"></div>
+          <div class="card__content">
+            <p class="card__category">Viento</p>
+            <h3 class="card__heading">Flautas, trompetas, etc.</h3>
+          </div>
+        </li>
+        <a class="card_" href="./paginas/categorias.html"><!-- Hipervínculo hacia categorías -->
+          <div class="card__background" style="background-image: url(https://i.pinimg.com/564x/a0/45/4e/a0454ea2bcf8190d82532845af798877.jpg)"></div>
+          <div class="card__content">
+            <p class="card__category">Percusión</p>
+            <h3 class="card__heading">Bombos, baquetas, etc.</h3>
+          </div>
+        </a>
+      <div>
+      </div>
+
+  </section>
+
+  <section class="servicios">
+      
+    <div class="card-wrapper">
+      <h1 id="servicios">Servicios</h1>
+      <figure class="card">
+        <img
+          src="https://image.freepik.com/foto-gratis/microfonos-mezclador-audio_101448-2123.jpg"
+          width="640"
+          height="640"
+          alt=""
+        />
+        <figcaption>
+          <blockquote>
+           Tenemos el sonido que necesitas.
+          </blockquote>
+          <cite
+            >Alquiler de sonido para fiestas de cumpleaños, bodas y eventos en general.</cite
+          >
+          <p class="credit">
+            <strong>Reservar</strong>,
+            <a href="https://es.wikipedia.org/wiki/Sonido" target="blank">Más</a>
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+
+  </section>
+
+  <!-- Formulario de contactos -->
+  <section class="contact"> 
+    <h1 class="c-h1">Contáctanos</h1>
+    <div class="contact-wrap">
+      <div class="contact-in">
+        <h1 id="contact">Información</h1>
+        <h2><i class="fa fa-phone" aria-hidden="true"></i> Teléfono</h2>
+        <p>(+503) 456-789</p>
+        <h2><i class="fa fa-envelope" aria-hidden="true"></i> Correo</h2>
+        <p>atempomusic@gmail.com</p>
+        <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Dirección</h2>
+        <p>Oportunidades FGK, Santa Ana, El Salavador</p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="contact-in">
+        <h1>Enviar un mensaje</h1>
+        <form action="mailto:ronald.guevara@oportunidades.org.sv" method="POST">
+          <input type="text" pattern="[A-Za-z]+"placeholder="Nombre Completo" class="contact-in-input" required >
+          <input type="email" placeholder="Correo" class="contact-in-input" required >
+          <input type="text" pattern="[A-Za-z]+" placeholder="Asunto" class="contact-in-input" required >
+          <textarea placeholder="Mensaje" class="contact-in-textarea"></textarea>
+          <input type="submit" value="Enviar" class="contact-in-btn">
+        </form>
+      </div>
+      <div class="contact-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19795.192239759075!2d-89.5527218533297!3d13.98535521878935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc56932844378ec73!2sPrograma%20Oportunidades%20-%20FGK%20Santa%20Ana!5e0!3m2!1ses-419!2ssv!4v1625431290370!5m2!1ses-419!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+
+  <p>Copyright &copy; 
+    <script>document.write(new Date().getFullYear());</script>, Atempo Music</p>
+<!-- #copyright -->
+  
+</footer>
+
+</body>
+
+</html>
