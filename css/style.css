@@ -41,12 +41,12 @@
 
 @font-face {
     font-family: 'fogtwono5';
-    src: url(/fonts/fogtwono5/FogtwoNo5.ttf);
+    src: url(../fonts/fogtwono5/FogtwoNo5.ttf);
 }
 
 @font-face {
     font-family: 'mohave';
-    src: url(/fonts/mohave/Mohave-Regular.otf);
+    src: url(../fonts/mohave/Mohave-Regular.otf);
 }
 
 /* Barra de Scroll */
@@ -747,7 +747,7 @@ h1 {
 
 .contact-in:nth-child(1) {
 	flex: 30%;
-	background: url(/img/Footer-1.jpg);
+	background: url(../img/Footer-1.jpg);
 	color: #fff;
 }
 
