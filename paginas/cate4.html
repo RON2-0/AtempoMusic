@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vientos</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel=StyleSheet href="../css/style_3.css" type="text/css">
+    <link rel="icon" href="../img/Favicon.png">
+</head>
+
+<body>
+    
+    <header class="min-4">
+        <h1>Viento</h1>
+    </header>
+
+        <!--Audio automático escondido-->
+
+  <audio loop autoplay>
+    <source src="../audios/Vientos-Duke_Ellington.mp3" type="audio/mp3">
+  </audio>
+
+    <!-- Barra de navegación a la izquierda -->
+    <nav>
+        <div class="container-bar">
+        <input type="checkbox" id="btn-social">
+        <label for="btn-social" class="fa fa-play"></label>
+          <div class="icon-social">
+            <a href="../index.html" class="icon-1">
+              <span id="title">Inicio</span>
+              <!--Iconos de Bootstrap-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+            </a>
+            <a href="./categorias.html" class="icon-2">
+              <span id="title">Categorías</span>
+              <!--Iconos de Bootstrap-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill" viewBox="0 0 16 16">
+                <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
+              </svg>
+            </a>
+            <a href="./servicios.html" class="icon-3">
+              <span id="title">Servicios</span>
+              <!--Iconos de Bootstrap-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z"/>
+              </svg>
+            </a>
+            <a href="./nosotros.html" class="icon-4">
+              <span id="title">Nosotros</span>
+              <!--Iconos de Bootstrap-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+    </nav>
+
+    <main>
+        
+      <!-- Contenido -->
+        <div class="content-area">
+            
+            <h2>Los mejores instrumentos de viento.</h2>
+    
+            <!-- Fila 1 -->
+            <div class="flex-container">
+                <!--Instrumentos de viento-->
+                <div class="product">
+                 <p class="product-title">Corneta</p>
+                 <img src="https://musicasencilla.com/wp-content/uploads/corneta2.jpg" alt="image" />
+                 <div class="product-text">
+                  <p>$60.00</p>
+                  <!--link a página de compra-->
+                  <a href="./compra.html"><button>Comprar</button></a>
+                 </div>
+                </div>
+                
+                
+                <div class="product">
+                 <p class="product-title">Trompeta</p>
+                 <img src="https://d1pmhtvb1oet1x.cloudfront.net/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/R/B/RBA10919L.jpg" alt="image" />
+                 <div class="product-text">
+                  <p>$145.00</p>
+                  <!--link a página de compra-->
+                  <a href="./compra.html"><button>Comprar</button></a>
+                 </div>
+                </div>
+                
+                
+                <div class="product">
+                    <p class="product-title"> Armónica XSound </p>
+                 <img src="https://www.electronicajaponesa.com/wp-content/uploads/2018/11/10B-300x300.jpg" alt="image" />
+                 <div class="product-text">
+                  <p>$8.50</p>
+                  <!--link a página de compra-->
+                  <a href="./compra.html"><button>Comprar</button></a>
+                 </div>
+                </div>
+                
+                
+                <div class="product">
+                    <p class="product-title">Clarinete  XCalibur </p>
+                 <img src="https://www.electronicajaponesa.com/wp-content/uploads/2018/08/W044.jpg" alt="image" />
+                 <div class="product-text">
+                     <p> $128.75 </p>
+                     <!--link a página de compra-->
+                     <a href="./compra.html"><button>Comprar</button></a>
+                 </div>
+                </div>
+                
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="flex-container">
+    
+                <div class="product">
+                    <p class="product-title">Flauta transversal profesional</p>
+                 <img src="https://www.electronicajaponesa.com/wp-content/uploads/2020/12/W022-scaled.jpg" alt="image" />
+                 <div class="product-text">
+                  <p>$149.95</p>
+                  <!--link a página de compra-->
+                  <a href="./compra.html"><button>Comprar</button></a>
+                 </div>
+                </div>
+                
+                
+                <div class="product">
+                    <p class="product-title">Corno francés de marcha </p>
+                 <img src="https://www.electronicajaponesa.com/wp-content/uploads/2020/09/WA005.jpg " alt="image" />
+                 <div class="product-text">
+                  <p>$499.95</p>
+                  <!--link a página de compra-->
+                  <a href="./compra.html"><button>Comprar</button></a>
+                 </div>
+                </div>
+                
+                
+                <div class="product">
+                    <p class="product-title"> Flauta dulce </p>
+                 <img src="https://www.electronicajaponesa.com/wp-content/uploads/2018/08/HR10G-IV.jpg " alt="image" />
+                 <div class="product-text">
+                  <p>$3.95</p>
+                  <!--link a página de compra-->
+                  <a href="./compra.html"><button>Comprar</button></a>
+                 </div>
+                </div>
+                
+                
+                <div class="product">
+                    <p class="product-title">Flauta dulce soprano  </p>
+                 <img src="https://www.electronicajaponesa.com/wp-content/uploads/2018/08/PSR152-BR.jpg " alt="image" />
+                 <div class="product-text">
+                     <p> $4.95 </p>
+                     <!--link a página de compra-->
+                     <a href="./compra.html"><button>Comprar</button></a>
+                 </div>
+                </div>
+                
+            </div>
+        
+        </div>
+
+    </main>
+    
+    <footer>
+
+        <p>Copyright &copy; 
+          <script>document.write(new Date().getFullYear());</script>, Atempo Music</p>
+      <!-- #copyright -->
+        
+    </footer>
+    
+</body>
+</html>

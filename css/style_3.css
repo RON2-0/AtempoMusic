@@ -1,0 +1,309 @@
+/*Establecimiento de Márgenes*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/*Roots*/
+
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #232323;
+    --text-primary: #1f1f1f;
+    --text-secondary: #000000;
+    --Black-Olive: #3e3c38;
+    --Copper-Red: #c77854;
+    --Bright-Yellow-Crayola: #fba629;
+    --MSU-Green: #264437;
+    --Champagne: #f7e8cb;
+}
+
+/*Selecciones*/
+
+::selection {
+    background: rgba(0,0,0,.8);
+    color: #fff;
+}
+
+/*Fuentes Tipográficas*/
+
+@font-face {
+    font-family: 'fogtwono5';
+    src: url(../fonts/fogtwono5/FogtwoNo5.ttf);
+}
+
+@font-face {
+    font-family: 'mohave';
+    src: url(../fonts/mohave/Mohave-Regular.otf);
+}
+
+/* Barra de Scroll */
+  
+body::-webkit-scrollbar {
+    width: 0.45rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #7b7465;
+    border-radius: 10px;
+    border-right: 2px solid var(--color-primary);
+}
+
+/*Barra de navegación flotante a la izquiera*/
+
+nav{
+    width: 100%;
+   z-index: 10;
+   position: fixed;
+}
+
+.container-bar{
+   width: 100%;
+   max-width: 50px;
+     position: fixed;
+   left: 0;
+   top: 25%;
+}
+.container-bar a{
+   display: block;
+   width: 50px;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 18px;
+   position: relative;
+   transition: all 500ms ease;
+   color: #fff;
+}
+.container-bar a:hover{
+   background: #1c1c1c;
+}
+.container-bar .icon-1{
+   background: var(--MSU-Green);
+   border-radius: 0px 5px 0px 0px;
+}
+.container-bar .icon-2{
+   background: #232323;
+}
+.container-bar .icon-3{
+   background: var(--Bright-Yellow-Crayola);
+}
+.container-bar .icon-4{
+   background: var(--Copper-Red);
+   border-radius: 0px 0px 5px 0px;
+}
+
+.container-bar #title{
+   position: absolute;
+   background: #1c1c1c;
+   padding: 0px 8px;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 3px;
+     font-family: 'Montserrat';
+   font-size: 15px;
+   top:12px; left: 0px;
+   transition: all 500ms ease;
+   opacity: 0;
+   visibility: hidden;
+   z-index: -1;
+}
+.container-bar a:hover #title{
+   opacity: 1;
+   visibility: visible;
+   left: 64px;
+}
+.container-bar #title:after{
+   position: absolute;
+   content: '';
+   border-left: 7px solid transparent;
+   border-right: 6px solid #1c1c1c;
+   border-top: 7px solid transparent;
+   border-bottom: 7px solid transparent;
+   right: 100%;
+   top: 8px;
+}
+#btn-social{
+   display: none;
+}
+.fa-play{
+   cursor: pointer;
+   transition: all 0.4s;
+   font-size: 13px;
+   margin-left: 1.4rem;
+   margin-bottom: 10px;
+   display: inline-block;
+   transform: rotate(180deg);
+   color: rgb(121, 42, 42);
+}
+#btn-social:checked ~ .fa-play{
+   transform: rotate(0deg);
+}
+.icon-social{
+   transition: all 0.4s;
+   transform: translateX(0%);
+   box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+#btn-social:checked ~ .icon-social{
+   transform: translateX(-100%);
+   box-shadow: 0px 1px 10px rgba(0,0,0,0.0);
+}
+
+/*Contenido*/
+
+header {
+	width: 100%;
+	height: 500px;
+  	background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font
+}
+
+header h1 {
+	font-size: 70px;
+	font-family: 'FogtwoNo5';
+	text-transform: uppercase;
+	color: #fff;
+    letter-spacing: 12px;
+}
+
+main h2{
+    font-family: 'FogtwoNo5';
+    padding-top: 3rem;
+    font-size: 30px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    width: 100%;
+    font-family: 'FogtwoNo5';
+    height: 5rem;
+    background: linear-gradient(#eee, #ffffff);
+    letter-spacing: 0.1rem;
+  }
+
+/*Productos*/
+
+/* Banner del guitarra */
+.min-1{
+    width: 100%;
+	height: 500px;
+	background-image: url(https://www.wallpapertip.com/wmimgs/59-595584_electric-guitar-wallpaper-hd.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+/* Banner del piano */
+.min-2{
+    width: 100%;
+	height: 500px;
+	background-image: url(https://culturadigitalformosa.com.ar/wp-content/uploads/2020/05/piano-oldschool-vintage-music.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+/* Banner de batería */
+.min-3{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://c.wallhere.com/photos/42/da/old_museum_drums_sweden_guitar_instrument_planet_malm-424563.jpg!d);
+    background-size: cover;
+    background-position: center center;
+}
+/* Banner de vientos */
+.min-4{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://www.wallpapertip.com/wmimgs/34-348081_alto-saxophone-background.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+/*Lista  de productos*/
+
+.content-area {
+	width: 100%;
+	position: relative;
+	background: #ebebeb;
+}
+
+.flex-container {
+	background-color: #eee;
+	width: auto;	
+	height: 70vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: flex-start;
+}
+
+.product {
+	position: relative;
+	max-width: 260px;
+	margin: 20px;
+	border: 1px solid rgba(180,180,180,0.4);
+	height: auto;
+	background-color: #fff;
+}
+
+.product:hover {
+	top: -2px;
+	box-shadow: 0px 15px 11px -10px rgba(0,0,0,0.2);
+}
+
+.product-title {
+	padding: 1em;
+	margin: 0;
+	font-size: 16px;
+}
+
+.product-text {
+	padding: 0 1em;
+}
+
+.flex-container img {
+	margin: 0;
+	max-width: 100%;
+    height: 260px;
+    width: 260px;
+}
+
+.flex-container p{
+    font-family: 'Montserrat';s
+}
+
+.flex-container button {
+	position: relative;
+	width: 80%;
+	margin: 1em 10%;
+	padding: 12px 24px;
+	background-color: var(--MSU-Green);
+	color: rgb(255, 255, 255);
+	border: none;
+    font-family: 'FogtwoNo5';
+    font-weight: 1rem;
+}
+
+.flex-container button:hover {
+	background-color: rgb(122, 200, 120);
+	top: -2px;
+	box-shadow: 0px 15px 11px -10px rgba(0,0,0,0.2);
+	cursor: pointer;
+}
